@@ -12,17 +12,11 @@ Built with Python and deployed using Flask, this web app aims to demonstrate rea
 
 ---
 
-## 🌐 Live Web App
-🔗 [Visit the App](https://multiple-disease-predictor-ml.herokuapp.com/)  
-*(Note: This link may not work if Heroku has discontinued its free tier.)*
-
----
-
 ## ⚙️ How to Run Locally
 
 ```bash
 # Clone or download this repository
-cd Multiple-Disease-Predictor-ML-Flask-WebApp
+cd Multiple-Disease-Prediction
 
 # Run the Flask app
 python app.py
