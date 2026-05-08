@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="form-section">
+
+    <div class="page-heading">
+        <h1>Heart Disease Risk Prediction</h1>
+
+        <p>
+            Provide patient cardiovascular details to evaluate the likelihood
+            of heart disease using a machine learning prediction model.
+        </p>
+    </div>
+
+    <div class="form-style-3">
+
+        <form action="{{ url_for('predictheartdisease') }}" method="post">
+
+            <div class="input-group">
+
+                <label>
+                    <span>Age</span>
+                    <input type="number" name="field1" placeholder="Enter age" required>
+                </label>
+
+                <label>
+                    <span>Sex</span>
+                    <input type="number" name="field2" placeholder="0 = Female, 1 = Male" required>
+                </label>
+
+                <label>
+                    <span>Chest Pain Type</span>
+                    <input type="number" name="field3" placeholder="0 - 3" required>
+                </label>
+
+                <label>
+                    <span>Resting Blood Pressure</span>
+                    <input type="number" name="field4" placeholder="94 - 200" required>
+                </label>
+
+                <label>
+                    <span>Cholesterol</span>
+                    <input type="number" name="field5" placeholder="126 - 564" required>
+                </label>
+
+                <label>
+                    <span>Fasting Blood Sugar</span>
+                    <input type="number" name="field6" placeholder="0 or 1" required>
+                </label>
+
+                <label>
+                    <span>Resting ECG</span>
+                    <input type="number" name="field7" placeholder="0 - 2" required>
+                </label>
+
+                <label>
+                    <span>Maximum Heart Rate</span>
+                    <input type="number" name="field8" placeholder="71 - 202" required>
+                </label>
+
+                <label>
+                    <span>Exercise Induced Angina</span>
+                    <input type="number" name="field9" placeholder="0 or 1" required>
+                </label>
+
+                <label>
+                    <span>ST Depression</span>
+                    <input type="number" step="any" name="field10" placeholder="0.0 - 6.2" required>
+                </label>
+
+                <label>
+                    <span>Slope</span>
+                    <input type="number" name="field11" placeholder="0 - 2" required>
+                </label>
+
+                <label>
+                    <span>Major Vessels (CA)</span>
+                    <input type="number" name="field12" placeholder="0 - 4" required>
+                </label>
+
+                <label>
+                    <span>Thal</span>
+                    <input type="number" name="field13" placeholder="0 - 3" required>
+                </label>
+
+            </div>
+
+            <div style="text-align:center;">
+                <input type="submit" value="Analyze Risk">
+            </div>
+
+        </form>
+
+        {% if output_text %}
+        <div class="result-box">
+            {{ output_text }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

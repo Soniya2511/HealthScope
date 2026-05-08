@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="form-section">
+
+    <div class="page-heading">
+        <h1>Parkinson’s Disease Prediction</h1>
+
+        <p>
+            Enter patient voice measurement parameters to evaluate the
+            likelihood of Parkinson’s disease using a trained machine learning model.
+        </p>
+    </div>
+
+    <div class="form-style-3">
+
+        <form action="{{ url_for('predictparkinsons') }}" method="post">
+
+            <div class="input-group">
+
+                <label>
+                    <span>MDVP Fo (Hz)</span>
+                    <input type="number" step="any" name="field1" required>
+                </label>
+
+                <label>
+                    <span>MDVP Fhi (Hz)</span>
+                    <input type="number" step="any" name="field2" required>
+                </label>
+
+                <label>
+                    <span>MDVP Flo (Hz)</span>
+                    <input type="number" step="any" name="field3" required>
+                </label>
+
+                <label>
+                    <span>Jitter (%)</span>
+                    <input type="number" step="any" name="field4" required>
+                </label>
+
+                <label>
+                    <span>Jitter (Abs)</span>
+                    <input type="number" step="any" name="field5" required>
+                </label>
+
+                <label>
+                    <span>RAP</span>
+                    <input type="number" step="any" name="field6" required>
+                </label>
+
+                <label>
+                    <span>PPQ</span>
+                    <input type="number" step="any" name="field7" required>
+                </label>
+
+                <label>
+                    <span>DDP</span>
+                    <input type="number" step="any" name="field8" required>
+                </label>
+
+                <label>
+                    <span>Shimmer</span>
+                    <input type="number" step="any" name="field9" required>
+                </label>
+
+                <label>
+                    <span>Shimmer dB</span>
+                    <input type="number" step="any" name="field10" required>
+                </label>
+
+                <label>
+                    <span>APQ3</span>
+                    <input type="number" step="any" name="field11" required>
+                </label>
+
+                <label>
+                    <span>APQ5</span>
+                    <input type="number" step="any" name="field12" required>
+                </label>
+
+                <label>
+                    <span>APQ</span>
+                    <input type="number" step="any" name="field13" required>
+                </label>
+
+                <label>
+                    <span>DDA</span>
+                    <input type="number" step="any" name="field14" required>
+                </label>
+
+                <label>
+                    <span>NHR</span>
+                    <input type="number" step="any" name="field15" required>
+                </label>
+
+                <label>
+                    <span>HNR</span>
+                    <input type="number" step="any" name="field16" required>
+                </label>
+
+                <label>
+                    <span>RPDE</span>
+                    <input type="number" step="any" name="field17" required>
+                </label>
+
+                <label>
+                    <span>DFA</span>
+                    <input type="number" step="any" name="field18" required>
+                </label>
+
+                <label>
+                    <span>Spread 1</span>
+                    <input type="number" step="any" name="field19" required>
+                </label>
+
+                <label>
+                    <span>Spread 2</span>
+                    <input type="number" step="any" name="field20" required>
+                </label>
+
+                <label>
+                    <span>D2</span>
+                    <input type="number" step="any" name="field21" required>
+                </label>
+
+                <label>
+                    <span>PPE</span>
+                    <input type="number" step="any" name="field22" required>
+                </label>
+
+            </div>
+
+            <div style="text-align:center;">
+                <input type="submit" value="Analyze Risk">
+            </div>
+
+        </form>
+
+        {% if output_text %}
+        <div class="result-box">
+            {{ output_text }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            AI-Powered Disease Prediction System
+        </h1>
+
+        <p>
+            A machine learning based healthcare application designed to
+            predict Diabetes, Heart Disease, and Parkinson’s Disease
+            using patient medical data and predictive analytics.
+        </p>
+
+        <a href="{{ url_for('diabetes') }}" class="btn">
+            Start Prediction
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FEATURE CARDS -->
+
+<section class="cards-section">
+
+    <div class="card-container">
+
+        <!-- Diabetes -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🩸
+            </div>
+
+            <h3>Diabetes Prediction</h3>
+
+            <p>
+                Analyze glucose and health parameters to evaluate
+                diabetes risk using machine learning.
+            </p>
+
+            <a href="{{ url_for('diabetes') }}">
+                Analyze
+            </a>
+
+        </div>
+
+        <!-- Heart -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ❤️
+            </div>
+
+            <h3>Heart Disease Prediction</h3>
+
+            <p>
+                Predict potential cardiovascular disease risk
+                using patient clinical information.
+            </p>
+
+            <a href="{{ url_for('heartdisease') }}">
+                Analyze
+            </a>
+
+        </div>
+
+        <!-- Parkinson's -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                🧠
+            </div>
+
+            <h3>Parkinson’s Prediction</h3>
+
+            <p>
+                Detect possible Parkinson’s disease patterns
+                using biomedical voice measurements.
+            </p>
+
+            <a href="{{ url_for('parkinsons') }}">
+                Analyze
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INFO SECTION -->
+
+<section class="info-section">
+
+    <div class="info-box">
+
+        <h2>
+            Built with Machine Learning & Flask
+        </h2>
+
+        <p>
+            This application integrates multiple machine learning models
+            with a Flask web framework to provide fast and accurate
+            disease prediction through an interactive healthcare interface.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
